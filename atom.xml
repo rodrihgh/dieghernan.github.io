@@ -3,7 +3,7 @@
 	<generator uri="https://dieghernan.github.io/chulapa" version="1.0.0">Chulapa</generator>
 	<link href="https://dieghernan.github.io/atom.xml" rel="self" type="application/atom+xml" />
 	<link href="https://dieghernan.github.io/" rel="alternate" type="text/html" />
-	<updated>2022-03-03T11:51:23+01:00</updated>
+	<updated>2022-03-03T15:25:19+01:00</updated>
 	<id>https://dieghernan.github.io/atom.xml</id>
 	<title>One world | Projects, maps and coding</title>
 	<subtitle>Projects, maps and coding</subtitle>
@@ -14,8 +14,8 @@
 	<rights>(c) 2022, dieghernan</rights>
 	<icon>https://dieghernan.github.io/assets/img/favicons/android-chrome-72x72.png</icon>
 	<logo>https://dieghernan.github.io/assets/img/site/banner.png</logo><entry>
-		<title>Insets with ggplot2 and tmap</title>
-		<link href="https://dieghernan.github.io/202203_insetmaps/" rel="alternate" type="text/html" title="Insets with ggplot2 and tmap"/>
+		<title>Insets with ggplot2 and tmap - and mapsf!</title>
+		<link href="https://dieghernan.github.io/202203_insetmaps/" rel="alternate" type="text/html" title="Insets with ggplot2 and tmap - and mapsf!"/>
 		<published>2022-03-03T00:00:00+01:00</published>
 		<updated>2022-03-03T00:00:00+01:00</updated>
 		<id>https://dieghernan.github.io/202203_insetmaps/</id>
@@ -237,13 +237,31 @@ applied to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gg
 
 &lt;p&gt;&lt;img src=&quot;../assets/img/blog/20220303_insettmap-1.png&quot; title=&quot;plot of chunk 20220303_insettmap&quot; alt=&quot;plot of chunk 20220303_insettmap&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;update-on-mapsf&quot;&gt;Update: On &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mapsf&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rgeomatic.hypotheses.org/&quot;&gt;Timotheé Giraud&lt;/a&gt; (AKA
+&lt;a href=&quot;https://twitter.com/rgeomatic&quot;&gt;\@rgeomatic&lt;/a&gt;), the developer of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mapsf&lt;/code&gt;, shared
+also how to create inset maps using that package:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mapsf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mf_map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mf_inset_on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;island&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bottomright&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cex&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mf_map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;island&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mf_inset_off&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/blog/20220303_insetmapsf-1.png&quot; title=&quot;plot of chunk 20220303_insetmapsf&quot; alt=&quot;plot of chunk 20220303_insetmapsf&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
 		</content>
 		
 		<author>
 			<name>dieghernan</name><uri>https://github.com/dieghernan/</uri></author>
 		<summary type="html">A common challenge when creating maps is how to include an inset map on your visualization. An inset map is a smaller map usually included on a corner that may provide additional context to the overall map, or may include map units than won&#39;t be usually represented properly.</summary>
 		<category term="posts"/>
-		<category term="ggplot2"/><category term="mapSpain"/><category term="maps"/><category term="rspatial"/><category term="rstats"/><category term="sf"/><category term="tmap"/>
+		<category term="ggplot2"/><category term="mapSpain"/><category term="maps"/><category term="mapsf"/><category term="rspatial"/><category term="rstats"/><category term="sf"/><category term="tmap"/>
 	</entry><entry>
 		<title>Beautiful Maps with R (IV): Fun with flags revisited</title>
 		<link href="https://dieghernan.github.io/202201_maps-flags/" rel="alternate" type="text/html" title="Beautiful Maps with R (IV): Fun with flags revisited"/>

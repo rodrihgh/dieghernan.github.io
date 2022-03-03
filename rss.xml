@@ -7,8 +7,8 @@
 		<description>Personal blog of dieghernan</description>
 		<language>en-US</language>
 		<copyright>(c) 2022, dieghernan</copyright>	
-		<pubDate>Thu, 03 Mar 2022 11:51:23 +0100</pubDate>
-		<lastBuildDate>Thu, 03 Mar 2022 11:51:23 +0100</lastBuildDate>
+		<pubDate>Thu, 03 Mar 2022 15:25:19 +0100</pubDate>
+		<lastBuildDate>Thu, 03 Mar 2022 15:25:19 +0100</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="https://dieghernan.github.io/rss.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
 			<link>https://dieghernan.github.io/</link>
 			<description>Personal blog of dieghernan</description>
 		</image><item>
-			<title>Insets with ggplot2 and tmap</title>
+			<title>Insets with ggplot2 and tmap - and mapsf!</title>
 			<description>
 				<![CDATA[	
  				<h3><p>A map on a map</p>
@@ -232,12 +232,30 @@ applied to <code class="language-plaintext highlighter-rouge">ggplot2</code> obj
 </span></code></pre></div></div>
 
 <p><img src="../assets/img/blog/20220303_insettmap-1.png" title="plot of chunk 20220303_insettmap" alt="plot of chunk 20220303_insettmap" width="100%" /></p>
+
+<h2 id="update-on-mapsf">Update: On <code class="language-plaintext highlighter-rouge">mapsf</code></h2>
+
+<p><a href="https://rgeomatic.hypotheses.org/">Timotheé Giraud</a> (AKA
+<a href="https://twitter.com/rgeomatic">\@rgeomatic</a>), the developer of <code class="language-plaintext highlighter-rouge">mapsf</code>, shared
+also how to create inset maps using that package:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">mapsf</span><span class="p">)</span><span class="w">
+
+</span><span class="n">mf_map</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="w">
+</span><span class="n">mf_inset_on</span><span class="p">(</span><span class="n">island</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bottomright"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">.3</span><span class="p">)</span><span class="w">
+</span><span class="n">mf_map</span><span class="p">(</span><span class="n">island</span><span class="p">)</span><span class="w">
+</span><span class="n">box</span><span class="p">(</span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">.5</span><span class="p">)</span><span class="w">
+</span><span class="n">mf_inset_off</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="../assets/img/blog/20220303_insetmapsf-1.png" title="plot of chunk 20220303_insetmapsf" alt="plot of chunk 20220303_insetmapsf" width="100%" /></p>
 </div>
 				]]>
 			</description>
 			<link>https://dieghernan.github.io/202203_insetmaps/</link>
 			<category>posts</category>
-		    <category>ggplot2</category><category>mapSpain</category><category>maps</category><category>rspatial</category><category>rstats</category><category>sf</category><category>tmap</category><media:title type="html"><![CDATA[Insets with ggplot2 and tmap ]]></media:title>
+		    <category>ggplot2</category><category>mapSpain</category><category>maps</category><category>mapsf</category><category>rspatial</category><category>rstats</category><category>sf</category><category>tmap</category><media:title type="html"><![CDATA[Insets with ggplot2 and tmap - and mapsf! ]]></media:title>
       <media:content url="https://dieghernan.github.io/assets/img/blog/20220303_inset.png" medium="image"/>
       <media:thumbnail url="https://dieghernan.github.io/assets/img/blog/20220303_inset.png" /><guid isPermaLink="true">https://dieghernan.github.io/202203_insetmaps/</guid>
       <pubDate>Thu, 03 Mar 2022 00:00:00 +0100</pubDate>
